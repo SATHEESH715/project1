@@ -9,7 +9,7 @@ env:
   PROJECT_NAME: Project 1          # shown in the Teams report
   RESULT_FOLDER: project1        # folder name in result-repo and in the blob container
   WEBAPP_NAME: project1
-  RESOURCE_GROUP: test-reporting-rg   # the resource group that holds the App Service
+  RESOURCE_GROUP: test-reporting-plan   # the resource group that holds the App Service
   APP_URL: https://project1-bcezgbbkath6b5f6.westus3-01.azurewebsites.net
   STORAGE_ACCOUNT: testreportsatheesh01
   CONTAINER: test-results
