@@ -61,10 +61,9 @@ jobs:
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
       - name: Deploy to the App Service
-        uses: azure/webapps-deploy@v3
-        with:
-          app-name: ${{ env.WEBAPP_NAME }}
-          package: publish
+        run: |
+          (cd publish && zip -qr ../app.zip .)
+          az webapp deploy --resource-group "$RESOURCE_GROUP" --name "$WEBAPP_NAME" --src-path app.zip --type zip
 
       - name: Wait for the app to answer
         timeout-minutes: 8
